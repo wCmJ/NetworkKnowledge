@@ -20,14 +20,6 @@ why would anyone add this extra middleman to their internet activity?
     3.to protect their identity online
         only the IP address of the proxy server will be visible.
 
-
-
-
-
-
-
-
-
 ReverseProxy
     what is a reverse proxy server?
         a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server.
@@ -55,17 +47,3 @@ ReverseProxy
         SSL encryption
             encrypting and decrypting SSL(or TLS) communications for each client can be computationally expensive for an origin server
             a reverse proxy can be configured to decrypt all incoming requests and encrypt all outgoing responses, freeing up valuable resources on the origin server.
-
-        
-    
-
-
-
-
-
-
-
-
-
-
-
