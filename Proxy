@@ -1,0 +1,71 @@
+Forward proxy, often called a proxy, proxy server, or web proxy
+what is it？
+    a server that sits in front of a group of client machines
+    intercepts requests 
+    communicates with web servers on behalf of those clients, like a middleman.
+    
+what can proxy do?
+    with proxy:
+        client  <--->   proxy   <--->   internet    <--->   server
+    without proxy:
+        client  <--->   internet    <--->   server
+
+why would anyone add this extra middleman to their internet activity?
+    1.to avoid state or institutional browsing restrictions
+        some governments, schools, and other organizations use FIREWARES to give their users access to a limited version of the internet
+        a forward proxy can be used to get around these restrictions, as they let the user connect to the proxy rather than directly to the sites they are visiting.
+        
+    2.to block access to certain content
+        a proxy can enable content filtering rules, refusing to forward responses from Facebook and other social media sites.    
+    3.to protect their identity online
+        only the IP address of the proxy server will be visible.
+
+
+
+
+
+
+
+
+
+ReverseProxy
+    what is a reverse proxy server?
+        a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server.
+
+    what can reverse proxy server do?
+        with reverse proxy:
+            client  <--->   internet    <--->   proxy   <--->   server
+        without reverse proxy:
+            client  <--->   internet    <--->   server
+    
+        Load balancing
+            a popular website that gets millions of users every day may not be able to handle all of its incoming site traffic with a single origin erver.
+            instead, the site can be distributed among a pool of different servers, all handling requests for the same site.
+            in this case, a reverse proxy can provide a load balancing solution which will distribute the incoming traffic evenly among the different servers to prevent any single server from becoming overloaded.
+        protecting from attacks
+            with a reverse proxy in place, a web site or service never needs to reveal the IP address of their origin server
+            this makes it much harder for attackers to leverage a targeted attack against them, such as a DDoS attack
+            instead the attackers will only be able to target the reverse proxy, which will have tighter security and more resources to fend off a cyber attack.                
+        global server load balancing
+            in this form of load balancing, a website can be distributed on several servers around the globe and the reverse proxy will send clients to the server that's geographically closet to them.
+            this decreases the distances that requests and responses need to travel, minimizing load times.
+        caching
+            a reverse proxy can also cache content, resulting in faster performance.
+            cache the response data
+        SSL encryption
+            encrypting and decrypting SSL(or TLS) communications for each client can be computationally expensive for an origin server
+            a reverse proxy can be configured to decrypt all incoming requests and encrypt all outgoing responses, freeing up valuable resources on the origin server.
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
