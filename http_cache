@@ -1,0 +1,53 @@
+1.  Cache-Store
+2.  Cache-Expire
+3.  Cache-Compare
+
+Cache-Store:
+    Cache-Control:public/private/no-cache/max-age/no-store
+    public/private/no-cache/max-age will store response data 
+    no-store will not store any response data
+
+
+    Cache-Control:no-cache means:
+        Cache-Control:max-age=0
+
+    max-age means: 
+        Cache-Control: public/private
+        Expires: current time + maxAge
+
+    
+Cache_Expire:
+    this policy will decide whether the cache is expired.
+    priority: Cache-Control > Expires
+    expire means do not use this data, not for this data is useless.            
+
+Cache-Compare:
+    client find data is expired
+                |
+    client send data identification to server
+                |
+    server will check If-Modified-Since/If-None-Match, if is valid, return 304, else, return 200.
+    
+    
+if no Cache-Expire is provided, browser will keep a heuristic cache expire strategy.
+    get 10% of D-value between Date and Last-Modified as expired time
+    
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
